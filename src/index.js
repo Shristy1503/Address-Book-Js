@@ -16,6 +16,8 @@ console.log("All Contacts After editing", addressBook.getAllContacts());
 
 console.log("Total Contacts:", addressBook.countContacts());
 
+const duplicateContact = new Contact("Arjun", "Singh", "Anand", "Bhopal", "Madhya Pradesh", "789101", "8765432109", "arjun@email.com");
+console.log(addressBook.addContact(duplicateContact));
 console.log(addressBook.deleteContact("Shristy"));
     console.log("All Contacts After Deleting:", addressBook.getAllContacts());
 
