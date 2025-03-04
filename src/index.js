@@ -10,6 +10,9 @@ console.log(addressBook.addContact(contact1));
 
 const contact2 = new Contact("Arjun", "Singh", "Anand", "Bhopal", "Madhya Pradesh", "789101", "8765432109", "arjun@email.com");
 console.log(addressBook.addContact(contact2));
+console.log("All Contacts Before editing", addressBook.getAllContacts());
+console.log(addressBook.editContact("Arjun", { address: "Amsterdam", city: "London", phone: "9234567890" }));
+console.log("All Contacts After editing", addressBook.getAllContacts());
 
 console.log("All Contacts:", addressBook.getAllContacts());
 

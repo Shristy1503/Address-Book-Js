@@ -27,6 +27,24 @@ class AddressBook {
         return results.length > 0 ? results : "No matching contacts found.";
     }
 
+    editContact(name, updatedDetails) {
+        const contactIndex = this.contacts.findIndex(contact => 
+            contact.firstName.toLowerCase() === name.toLowerCase()
+        );
+
+        if (contactIndex === -1) {
+           return ("Contact not found!");
+        }
+
+        Object.keys(updatedDetails).forEach(key => {
+            if (updatedDetails[key]) {
+                this.contacts[contactIndex][key] = updatedDetails[key];
+            }
+        });
+
+        return "Contact updated successfully!";
+    }
+
 }
 
 module.exports = AddressBook;
