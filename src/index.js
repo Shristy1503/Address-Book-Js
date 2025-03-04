@@ -20,10 +20,14 @@ const duplicateContact = new Contact("Arjun", "Singh", "Anand", "Bhopal", "Madhy
 console.log(addressBook.addContact(duplicateContact));
 console.log(addressBook.deleteContact("Shristy"));
     console.log("All Contacts After Deleting:", addressBook.getAllContacts());
-
+    
 console.log("All Contacts:", addressBook.getAllContacts());
 
 console.log("Search Result:", addressBook.searchContact("Arjun"));
+
+console.log("Contacts in Bhopal:");
+console.log(addressBook.searchByCityOrState("Bhopal")); 
+
 }catch(error){
     console.error("Error:", error.message);
 }

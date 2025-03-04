@@ -59,7 +59,13 @@ class AddressBook {
     countContacts() {
         return this.contacts.reduce((count) => count + 1, 0);
     }
-
+    
+    searchByCityOrState(location) {
+        return this.contacts.filter(c => 
+            c.city.toLowerCase() === location.toLowerCase() || 
+            c.state.toLowerCase() === location.toLowerCase()
+        );
+    } 
 }
 
 module.exports = AddressBook;
