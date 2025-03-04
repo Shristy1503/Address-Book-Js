@@ -52,6 +52,9 @@ class AddressBook {
         this.contacts.splice(index, 1);
         return "Contact deleted successfully!";
     }
+    countContacts() {
+        return this.contacts.reduce((count) => count + 1, 0);
+    }
 
 }
 
