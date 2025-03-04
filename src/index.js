@@ -16,8 +16,6 @@ console.log("All Contacts After editing", addressBook.getAllContacts());
 
 console.log("Total Contacts:", addressBook.countContacts());
 
-const duplicateContact = new Contact("Arjun", "Singh", "Anand", "Bhopal", "Madhya Pradesh", "789101", "8765432109", "arjun@email.com");
-console.log(addressBook.addContact(duplicateContact));
 console.log(addressBook.deleteContact("Shristy"));
     console.log("All Contacts After Deleting:", addressBook.getAllContacts());
     
@@ -27,7 +25,10 @@ console.log("Search Result:", addressBook.searchContact("Arjun"));
 
 console.log("Contacts in Bhopal:");
 console.log(addressBook.searchByCityOrState("Bhopal")); 
-
+console.log("Viewing Persons by City or State:");
+    console.log(addressBook.viewPersonsByCityOrState());
+    const duplicateContact = new Contact("Arjun", "Singh", "Anand", "Bhopal", "Madhya Pradesh", "789101", "8765432109", "arjun@email.com");
+    console.log(addressBook.addContact(duplicateContact));
 }catch(error){
     console.error("Error:", error.message);
 }
