@@ -27,6 +27,9 @@ console.log("Contacts in Bhopal:");
 console.log(addressBook.searchByCityOrState("Bhopal")); 
 console.log("Viewing Persons by City or State:");
     console.log(addressBook.viewPersonsByCityOrState());
+
+    console.log("Count of Contacts by City and State:");
+    console.log(addressBook.countByCityOrState());
     const duplicateContact = new Contact("Arjun", "Singh", "Anand", "Bhopal", "Madhya Pradesh", "789101", "8765432109", "arjun@email.com");
     console.log(addressBook.addContact(duplicateContact));
 }catch(error){

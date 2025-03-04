@@ -80,6 +80,14 @@ class AddressBook {
             return result;
         }, {});
     }
+
+    countByCityOrState() {
+        return this.contacts.reduce((countMap, contact) => {
+            countMap.city[contact.city] = (countMap.city[contact.city] || 0) + 1;
+            countMap.state[contact.state] = (countMap.state[contact.state] || 0) + 1;
+            return countMap;
+        }, { city: {}, state: {} });
+    }
 }
 
 module.exports = AddressBook;
