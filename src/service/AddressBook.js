@@ -8,6 +8,8 @@ class AddressBook {
     addContact(contact) {
         if (!(contact instanceof Contact)) {
             return "Invalid contact object!";
+        } if (this.contacts.some(c => c.phone === contact.phone || c.email === contact.email)) {
+            throw new Error("Duplicate Contact! Phone number or Email already exists.");
         }
         this.contacts.push(contact);
         return "Contact added successfully!";
