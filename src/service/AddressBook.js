@@ -44,6 +44,14 @@ class AddressBook {
 
         return "Contact updated successfully!";
     }
+    deleteContact(name) {
+        const index = this.contacts.findIndex(c => c.firstName.toLowerCase() === name.toLowerCase());
+        if (index === -1) {
+            throw new Error("Contact not found!");
+        }
+        this.contacts.splice(index, 1);
+        return "Contact deleted successfully!";
+    }
 
 }
 
