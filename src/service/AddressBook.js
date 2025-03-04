@@ -88,6 +88,14 @@ class AddressBook {
             return countMap;
         }, { city: {}, state: {} });
     }
+
+    sortContactsByName() {
+        return this.contacts.sort((a, b) => {
+            let nameA = a.firstName.toLowerCase();
+            let nameB = b.firstName.toLowerCase();
+            return nameA.localeCompare(nameB);
+        });
+    }
 }
 
 module.exports = AddressBook;

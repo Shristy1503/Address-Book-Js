@@ -30,6 +30,10 @@ console.log("Viewing Persons by City or State:");
 
     console.log("Count of Contacts by City and State:");
     console.log(addressBook.countByCityOrState());
+
+    console.log("\nContacts Sorted Alphabetically:");
+    console.log(addressBook.sortContactsByName().map(contact => contact.toString()).join("\n"));
+
     const duplicateContact = new Contact("Arjun", "Singh", "Anand", "Bhopal", "Madhya Pradesh", "789101", "8765432109", "arjun@email.com");
     console.log(addressBook.addContact(duplicateContact));
 }catch(error){
